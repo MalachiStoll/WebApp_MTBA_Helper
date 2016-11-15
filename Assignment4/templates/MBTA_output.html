@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Output of Function</title>
+
+	<style type="text/css">
+	body { margin-left:15%; margin-right:15%;font-family:"helvetica"}
+
+  body#background {
+  background: url('https://media.giphy.com/media/HgOTeTofUZ2jC/giphy.gif') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+.trans {background-color:white; opacity:.8;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;}
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
+.Head{
+      text-align:center
+}
+h2{font-weight:normal}
+   </style>
+
+	
+  </head>
+  <body id="background">
+<div class="trans">
+  <h1 class="Head"> MBTA Locator</h1>
+  
+  <h2> Your closest station is {{mbta_station_name}} and it is {{distance}} miles away.</h2>
+					
+ <h3 class="Head">Station Location</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var locationn = {lat: {{stop_lat}}, lng:{{stop_lon}}};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: locationn
+        });
+        var marker = new google.maps.Marker({
+          position: locationn,
+          map: map
+        });
+      }
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsj-GOOzOKB3q_X_wTaxqP9AYQG1rlFek&callback=initMap">
+    </script>
+
+</div>
+</body>
+</html>

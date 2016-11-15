@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Contact</title>
+
+	<style type="text/css">
+	body { margin-left:15%; margin-right:15%;font-family:"helvetica"}
+
+  body#background {
+  background: url('https://media.giphy.com/media/HgOTeTofUZ2jC/giphy.gif') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+.trans {background-color:white; opacity:.8;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;}
+  h1{text-align:center; color:navy}
+  .input{text-align:center
+; font-style:italic
+;}
+h2{text-align:center}
+.inp{height:40px; width:500px;text-align:center;font-size:15pt;background-color:black;color:white}
+
+  </style>
+
+	
+  </head>
+  <body id="background">
+    
+<div class="trans">
+  <h1> MBTA Locator</h1>
+  
+  <h2> Hello! Let's find your nearest station! </h2>
+	
+  <p class="input">Where are you?</p>
+	<form method="post" action="" name = "mbta_station">
+	
+		<p class="input">
+		<input placeholder="Please Input a Location" class="inp" type= "text" name="place_name" maxlength="70"/>
+    </p>
+	<table align=center>
+		<tr><td><input type="submit" value="Submit"> 
+    </td>
+		<td><input type="Reset" value="Reset" name="Reset"/></td></tr>
+		
+</table>
+
+		
+</form>
+</div>
+</body>
+</html>
